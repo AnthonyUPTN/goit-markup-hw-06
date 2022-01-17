@@ -75,16 +75,37 @@
             </button>
             <div class="modal-form">
               <h3 class="modal-about">Оставьте свои данные, мы вам перезвоним</h3>
-
-              <form class="modal-form1">
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" />
-                <label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel" />
-                <label for="mail">Почта</label>
-                <input type="mail" name="mail" id="mail" />
-                <!-- <label for="name">Оставить комментарий</label>
-                <textarea type="text" name="name" id="name" placeholder="Введите текст" /> -->
+              <form>
+                <div class="inputs">
+                  <label class="form-name" for="name"></label>
+                    <span class="inputs-name">Имя</span>
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-modal-person"></use>
+                    </svg>
+                    <input type="text" name="name" id="name" />
+                  </label>
+                  <label class="form-tel" for="tel">
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-modal-phone"></use>
+                    </svg>
+                    <span class="inputs-name"></span> Телефон
+                    <input type="tel" name="tel" id="tel" />
+                  </label>
+                  <label class="form-mail" for="mail">
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-modal-email"></use>
+                    </svg>
+                    <span class="inputs-name"></span> Почта
+                    <input type="mail" name="mail" id="mail" />
+                  </label>
+                  <label class="form-comment" for="comment">Комментарий
+                  <textarea name="comment" id="comment" placeholder="Введите текст"></textarea></label>
+                </div>
+                <div class="modal-policy">
+                  <input type="checkbox" name="policy" id="policy" />
+                  <label for="policy">Соглашаюсь с рассылкой и принимаю <span class="license-rules">Условия договора</span></label>
+                </div>
+                <button class="modal-submit" type="submit">Отправить</button>
               </form>
             </div>
           </div>
@@ -188,26 +209,26 @@
                 <p class="team-job">Product Designer</p>
                 <ul class="team-links">
                   <li class="team-socials">
-                    <a class="team-flex" href="">
+                    <a class="team-flex" href="" aria-label="Instagram">
                       <svg class="social-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Twitter"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Facebook"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Linkedin"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
@@ -222,26 +243,26 @@
                 <p class="team-job">Frontend Developer</p>
                 <ul class="team-links">
                   <li class="team-socials">
-                    <a class="team-flex" href="">
+                    <a class="team-flex" href="" aria-label="Instagram">
                       <svg class="social-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Twitter"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Facebook"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Linkedin"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
@@ -256,26 +277,26 @@
                 <p class="team-job">Marketing</p>
                 <ul class="team-links">
                   <li class="team-socials">
-                    <a class="team-flex" href="">
+                    <a class="team-flex" href="" aria-label="Instagram">
                       <svg class="social-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Twitter"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Facebook"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Linkedin"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
@@ -290,26 +311,26 @@
                 <p class="team-job">UI Designer</p>
                 <ul class="team-links">
                   <li class="team-socials">
-                    <a class="team-flex" href="">
+                    <a class="team-flex" href="" aria-label="Instagram">
                       <svg class="social-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Twitter"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Facebook"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="team-socials">
-                    <a class="team-flex" href=""
+                    <a class="team-flex" href="" aria-label="Linkedin"
                       ><svg class="social-icon">
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
@@ -328,37 +349,37 @@
           <h2 class="section-title clients-title">Постоянные клиенты</h2>
           <ul class="clients-list">
             <li class="clients-companies">
-              <a class="clients-flex" href=""
+              <a class="clients-flex" href="" aria-label="Our client"
                 ><svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo1"></use></svg
               ></a>
             </li>
             <li class="clients-companies">
-              <a class="clients-flex" href="">
+              <a class="clients-flex" href="" aria-label="Our client">
                 <svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo2"></use></svg
               ></a>
             </li>
             <li class="clients-companies">
-              <a class="clients-flex" href="">
+              <a class="clients-flex" href="" aria-label="Our client">
                 <svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo3"></use></svg
               ></a>
             </li>
             <li class="clients-companies">
-              <a class="clients-flex" href="">
+              <a class="clients-flex" href="" aria-label="Our client">
                 <svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo4"></use></svg
               ></a>
             </li>
             <li class="clients-companies">
-              <a class="clients-flex" href="">
+              <a class="clients-flex" href="" aria-label="Our client">
                 <svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo5"></use></svg
               ></a>
             </li>
             <li class="clients-companies">
-              <a class="clients-flex" href="">
+              <a class="clients-flex" href="" aria-label="Our client">
                 <svg class="icon-companies">
                   <use href="./images/icons.svg#icon-logo6"></use></svg
               ></a>
