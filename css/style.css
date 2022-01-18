@@ -422,7 +422,7 @@ textarea:focus {
 .checkbox:checked + .checkbox-new {
   border: transparent;
 
-  background-image: url(../images/icon-check.svg);
+  background-image: url('../images/icon-check.svg');
 }
 
 .license-rules {
