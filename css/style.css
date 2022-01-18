@@ -264,6 +264,8 @@ ul {
   min-width: 528px;
   min-height: 581px;
   background-color: var(--color-white);
+
+  border-radius: 4px;
 }
 
 .modal-close {
@@ -330,10 +332,6 @@ ul {
   transition: fill var(--cubic), border var(--cubic), border-radius var(--cubic);
 }
 
-.inputs-name {
-  margin-bottom: 4px;
-}
-
 .form-name,
 .form-mail,
 .form-tel,
@@ -342,7 +340,32 @@ ul {
 
   display: flex;
   flex-direction: column;
+
   position: relative;
+}
+
+input {
+  padding-top: 18px;
+}
+
+.inputs-name {
+  margin-bottom: 4px;
+}
+
+.label-icon {
+  position: absolute;
+  top: 39px;
+  left: 10px;
+}
+
+input:focus + .label-icon,
+input:not(:placeholder-shown) + .label-icon {
+  fill: var(--action-text-color);
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  outline: 1px solid var(--action-text-color);
 }
 
 .form-name:hover input,
@@ -360,17 +383,11 @@ ul {
 
 textarea:focus-visible,
 input:focus-visible {
-  outline: none;
+  outline: 1px solid var(--action-text-color);
 }
 
 .form-comment {
   margin-bottom: 0;
-}
-
-.label-icon {
-  position: absolute;
-  top: 38px;
-  left: 10px;
 }
 
 textarea {
@@ -393,7 +410,9 @@ textarea:focus {
 
 .modal-policy {
   margin-bottom: 30px;
+}
 
+.policy-line {
   display: flex;
   align-items: center;
 }
@@ -426,6 +445,8 @@ textarea:focus {
 }
 
 .license-rules {
+  margin-left: 4px;
+
   color: var(--action-text-color);
   text-decoration: underline;
 }
@@ -810,14 +831,14 @@ textarea:focus {
   transition: border var(--cubic);
 }
 
-.join-email:hover,
+/* .join-email:hover,
 .join-email:focus {
   border: 1px solid var(--action-text-color);
-}
+} */
 
-.join-email:focus-visible {
+/* .join-email:focus-visible {
   outline: none;
-}
+} */
 
 .join-submit {
   display: flex;
@@ -833,6 +854,10 @@ textarea:focus {
   border: transparent;
 
   cursor: pointer;
+}
+
+.join-submit:focus-visible {
+  outline: none;
 }
 
 .submit-text {
@@ -869,6 +894,11 @@ textarea:focus {
   border-radius: 4px;
 
   transition: background-color var(--cubic), box-shadow var(--cubic), var(--cubic);
+}
+
+.current-button {
+  background-color: var(--action-text-color);
+  color: var(--color-white);
 }
 
 .button-nav:hover,
