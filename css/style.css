@@ -246,10 +246,10 @@ ul {
   transition: opacity var(--cubic);
 }
 
-/* .blackdrop.is-hidden {
+.blackdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-} */
+}
 
 .modal {
   position: absolute;
@@ -283,6 +283,13 @@ ul {
   background-color: var(--color-white);
 
   cursor: pointer;
+
+  transition: fill var(--cubic);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--action-text-color);
 }
 
 .modal-about {
@@ -311,33 +318,59 @@ ul {
   position: relative;
 }
 
+.inputs input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 30px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+
+  transition: fill var(--cubic), border var(--cubic), border-radius var(--cubic);
+}
+
+.inputs-name {
+  margin-bottom: 4px;
+}
+
 .form-name,
 .form-mail,
 .form-tel,
 .form-comment {
+  margin-bottom: 10px;
+
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
+.form-name:hover input,
+.form-mail:hover input,
+.form-tel:hover input {
+  border-radius: 4px;
+  border: 1px solid var(--action-text-color);
+}
+
+.form-name:hover .label-icon,
+.form-mail:hover .label-icon,
+.form-tel:hover .label-icon {
+  fill: var(--action-text-color);
+}
+
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+}
+
+.form-comment {
+  margin-bottom: 0;
+}
+
 .label-icon {
   position: absolute;
-  top: 40px;
+  top: 38px;
   left: 10px;
-}
-
-.inputs input {
-  margin-bottom: 10px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 25px;
-
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.inputs-name {
-  margin-bottom: 4px;
 }
 
 textarea {
@@ -348,10 +381,48 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
 
   min-height: 140px;
+
+  transition: border-radius var(--cubic), border var(--cubic);
+}
+
+textarea:hover,
+textarea:focus {
+  border-radius: 4px;
+  border: 1px solid var(--action-text-color);
 }
 
 .modal-policy {
   margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-new {
+  margin-right: 10px;
+
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-new {
+  border: transparent;
+
+  background-image: url(/images/icon-check.svg);
 }
 
 .license-rules {
